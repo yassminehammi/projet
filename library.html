@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projet.css">
+    <script src="projet.js"></script>
+    <title>Pawsome Haven - Premium Pet Accessories</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                🐾 Pawsome <span>Haven</span>
+            </div>
+            <nav>
+                <a href="#tags">Pet Tags</a>
+                <a href="#outfits">Outfits</a>
+                <a href="#climbing">Cat Furniture</a>
+                <a href="#treats">Treats</a>
+            </nav>
+            <div class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Premium Pet Accessories</h1>
+        <p>Quality products your pets will love</p>
+    </div>
+
+    <div class="category-tabs">
+        <button class="tab-btn" data-category="all" onclick="show()">All Products</button>
+       <a href="dogs.html"><button class="tab-btn">🐕 For Dogs</button></a>
+        <button class="tab-btn" data-category="cat" onclick="show2()">🐱 For Cats</button>
+        <button class="tab-btn" data-category="bestseller" onclick="show3()">✨ Best Sellers</button>
+    </div>
+
+    <div class="products" id="products-container">
+        <!-- Dog Products -->
+        <div class="product-card visible" data-category="dog bestseller" id="tags">
+            <img src="dog1.jpg" alt="Custom Pet Tag" class="product-image">
+            <div class="product-info">
+                <span class="badge">Bestseller</span>
+                <h3>Custom Engraved Pet Tag</h3>
+                <p>Premium stainless steel ID tag with free personalization. Includes pet name and phone number engraving.</p>
+                <div class="features">
+                    <span class="feature-tag">Free Engraving</span>
+                    <span class="feature-tag">5 Colors</span>
+                    <span class="feature-tag">Waterproof</span>
+                </div>
+                <div class="price">19.99 dt</div>
+                <button class="btn" onclick="addToCart('Custom Engraved Pet Tag')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="dog">
+            <img src="dog2.jpg" alt="Dog Bandana" class="product-image">
+            <div class="product-info">
+                <span class="badge">New</span>
+                <h3>Designer Dog Bandana Set</h3>
+                <p>3-pack of stylish bandanas in premium cotton. Reversible designs with adjustable fit for all sizes.</p>
+                <div class="features">
+                    <span class="feature-tag">3-Pack</span>
+                    <span class="feature-tag">Reversible</span>
+                    <span class="feature-tag">Washable</span>
+                </div>
+                <div class="price">24.99 dt</div>
+                <button class="btn" onclick="addToCart('Designer Dog Bandana Set')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="dog bestseller">
+            <img src="dog3.jpg" alt="Dog Sweater" class="product-image">
+            <div class="product-info">
+                <span class="badge">Bestseller</span>
+                <h3>Cozy Knit Dog Sweater</h3>
+                <p>Hand-knitted wool sweater to keep your pup warm. Available in multiple sizes and colors.</p>
+                <div class="features">
+                    <span class="feature-tag">Wool Blend</span>
+                    <span class="feature-tag">XS-XL</span>
+                    <span class="feature-tag">Warm</span>
+                </div>
+                <div class="price">34.99 dt</div>
+                <button class="btn" onclick="addToCart('Cozy Knit Dog Sweater')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="dog">
+            <img src="dog5.jpg" alt="Dog Harness" class="product-image">
+            <div class="product-info">
+                <h3>No-Pull Dog Harness</h3>
+                <p>Ergonomic harness with reflective strips. Reduces pulling and provides better control during walks.</p>
+                <div class="features">
+                    <span class="feature-tag">Reflective</span>
+                    <span class="feature-tag">Padded</span>
+                    <span class="feature-tag">Adjustable</span>
+                </div>
+                <div class="price">29.99 dt</div>
+                <button class="btn" onclick="addToCart('No-Pull Dog Harness')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cat Products -->
+        <div class="product-card visible" data-category="cat bestseller">
+            <img src="dog6.jpg" alt="Cat Tree" class="product-image">
+            <div class="product-info">
+                <span class="badge">Premium</span>
+                <h3>Multi-Level Cat Tree Tower</h3>
+                <p>5-tier climbing tower with sisal scratching posts, cozy condos, and plush perches. Sturdy construction.</p>
+                <div class="features">
+                    <span class="feature-tag">5 Levels</span>
+                    <span class="feature-tag">Sisal Posts</span>
+                    <span class="feature-tag">Stable Base</span>
+                </div>
+                <div class="price">129.99 dt</div>
+                <button class="btn" onclick="addToCart('Multi-Level Cat Tree Tower')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="cat bestseller">
+            <img src="dog7.jpg" alt="Cat Shelves" class="product-image">
+            <div class="product-info">
+                <span class="badge">Bestseller</span>
+                <h3>Floating Cat Wall Shelves</h3>
+                <p>Set of 5 modern wall-mounted shelves. Creates vertical playground for cats. Easy installation included.</p>
+                <div class="features">
+                    <span class="feature-tag">Space Saving</span>
+                    <span class="feature-tag">Modern Design</span>
+                    <span class="feature-tag">Easy Install</span>
+                </div>
+                <div class="price">89.99 dt</div>
+                <button class="btn" onclick="addToCart('Floating Cat Wall Shelves')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="cat">
+            <img src="dog8.jpg" alt="Cat Window Perch" class="product-image">
+            <div class="product-info">
+                <h3>Window Cat Perch Bed</h3>
+                <p>Suction cup window seat with soft cushion. Holds up to 50lbs. Perfect sunny spot for your cat.</p>
+                <div class="features">
+                    <span class="feature-tag">Suction Cups</span>
+                    <span class="feature-tag">50lb Capacity</span>
+                    <span class="feature-tag">Cushioned</span>
+                </div>
+                <div class="price">39.99 dt</div>
+                <button class="btn" onclick="addToCart('Window Cat Perch Bed')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="cat">
+            <img src="dog9.jpg" alt="Cat Tunnel" class="product-image">
+            <div class="product-info">
+                <h3>Interactive Cat Tunnel Toy</h3>
+                <p>Collapsible play tunnel with crinkle material and hanging toys. Keeps cats active and entertained.</p>
+                <div class="features">
+                    <span class="feature-tag">Collapsible</span>
+                    <span class="feature-tag">Crinkle Sound</span>
+                    <span class="feature-tag">With Toys</span>
+                </div>
+                <div class="price">22.99 dt</div>
+                <button class="btn" onclick="addToCart('Interactive Cat Tunnel Toy')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Natural Treats -->
+        <div class="product-card visible" data-category="dog bestseller" id="treats">
+            <img src="dog10.jpg" alt="Dog Treats" class="product-image">
+            <div class="product-info">
+                <span class="badge">All Natural</span>
+                <h3>Organic Chicken Jerky Treats</h3>
+                <p>100% natural chicken breast strips. No preservatives or additives. Made in small batches in USA.</p>
+                <div class="features">
+                    <span class="feature-tag">Grain-Free</span>
+                    <span class="feature-tag">USA Made</span>
+                    <span class="feature-tag">No Additives</span>
+                </div>
+                <div class="price">18.99 dt</div>
+                <button class="btn" onclick="addToCart('Organic Chicken Jerky Treats')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="cat">
+            <img src="dog11.jpg" alt="Cat Treats" class="product-image">
+            <div class="product-info">
+                <span class="badge">Premium</span>
+                <h3>Wild Salmon Cat Treats</h3>
+                <p>Freeze-dried wild salmon bites. Rich in Omega-3 for healthy skin and shiny coat. Cats love them!</p>
+                <div class="features">
+                    <span class="feature-tag">Omega-3</span>
+                    <span class="feature-tag">Freeze-Dried</span>
+                    <span class="feature-tag">Wild Caught</span>
+                </div>
+                <div class="price">16.99 dt</div>
+                <button class="btn" onclick="addToCart('Wild Salmon Cat Treats')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="dog">
+            <img src="dog12.jpg" alt="Dental Chews" class="product-image">
+            <div class="product-info">
+                <h3>Natural Dental Chew Sticks</h3>
+                <p>Sweet potato and mint dental chews. Helps clean teeth and freshen breath naturally. Grain-free formula.</p>
+                <div class="features">
+                    <span class="feature-tag">Dental Health</span>
+                    <span class="feature-tag">Grain-Free</span>
+                    <span class="feature-tag">Fresh Breath</span>
+                </div>
+                <div class="price">14.99 dt</div>
+                <button class="btn" onclick="addToCart('Natural Dental Chew Sticks')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card visible" data-category="dog cat">
+            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&h=400&fit=crop" alt="Peanut Butter Treats" class="product-image">
+            <div class="product-info">
+                <h3>Organic Peanut Butter Bites</h3>
+                <p>Crunchy peanut butter training treats. Perfect size for rewards. Made with organic ingredients only.</p>
+                <div class="features">
+                    <span class="feature-tag">Organic</span>
+                    <span class="feature-tag">Training Size</span>
+                    <span class="feature-tag">Crunchy</span>
+                </div>
+                <div class="price">12.99 dt</div>
+                <button class="btn" onclick="addToCart('Organic Peanut Butter Bites')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>🐾 Pawsome Haven</h3>
+        <p>Premium pet accessories for your beloved companions</p>
+        <p>Free shipping on orders over $50 | 30-Day Money Back Guarantee</p>
+        <p style="margin-top: 1rem;">Questions? Contact us at hello@pawsomehaven.com</p>
+    </footer>
+
+</body>
+</html>

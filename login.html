@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pawsome Haven</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                🐾 Pawsome <span>Haven</span>
+            </div>
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Sign in to continue shopping</p>
+
+            <div id="message-container"></div>
+
+            <form id="loginForm" method="POST">
+                <div class="form-group">
+                    <label for="email">
+                        <span class="icon">📧</span>
+                        Email Address
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="email">
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <span class="icon">🔒</span>
+                        Password
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required placeholder="Enter your password" autocomplete="current-password">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            👁️
+                        </button>
+                    </div>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="forgot-password.html" class="link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Sign In
+                </button>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-buttons">
+                    <button type="button" class="btn-social btn-google">
+                        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button type="button" class="btn-social btn-facebook">
+                        <img src="https://img.icons8.com/color/16/000000/facebook-new.png" alt="Facebook">
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <p class="signup-link">
+                    Don't have an account? <a href="signup.html" class="link">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

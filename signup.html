@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Pawsome Haven</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <div class="logo">
+                🐾 Pawsome <span>Haven</span>
+            </div>
+            <h2>Create Your Account</h2>
+            <p class="subtitle">Join our pet-loving community!</p>
+
+            <form id="signupForm" method="POST" action="signup.php">
+                <div class="form-group">
+                    <label for="fullname">
+                        <span class="icon">👤</span>
+                        Full Name
+                    </label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                    <span class="error-message" id="fullname-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <span class="icon">📧</span>
+                        Email Address
+                    </label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        <span class="icon">📱</span>
+                        Phone Number
+                    </label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <span class="icon">🔒</span>
+                        Password
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                        <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                            👁️
+                        </button>
+                    </div>
+                    <div class="password-strength" id="password-strength"></div>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">
+                        <span class="icon">🔒</span>
+                        Confirm Password
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-password" name="confirm_password" required placeholder="Confirm your password">
+                        <button type="button" class="toggle-password" onclick="togglePassword('confirm-password')">
+                            👁️
+                        </button>
+                    </div>
+                    <span class="error-message" id="confirm-password-error"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I agree to the <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a></span>
+                    </label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Create Account
+                </button>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-buttons">
+                    <button type="button" class="btn-social btn-google">
+                        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button type="button" class="btn-social btn-facebook">
+                        <img src="https://img.icons8.com/color/16/000000/facebook-new.png" alt="Facebook">
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <p class="signin-link">
+                    Already have an account? <a href="login.html" class="link">Sign In</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
