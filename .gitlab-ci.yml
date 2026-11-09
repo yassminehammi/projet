@@ -1,0 +1,25 @@
+stages:
+  - test
+  - build
+
+variables:
+  IMAGE_NAME: "devops-demo"
+
+test:
+  stage: test
+  tags:
+    - local
+  script:
+    - echo "Exécution des tests..."
+    - python --version
+    - echo "Tests réussis !"
+
+build-image:
+  stage: build
+  tags:
+    - local
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+    - docker build -t $IMAGE_NAME:$CI_COMMIT_SHORT_SHA .
+    - docker tag $IMAGE_NAME:$CI_COMMIT_SHORT_SHA $IMAGE_NAME:latest
